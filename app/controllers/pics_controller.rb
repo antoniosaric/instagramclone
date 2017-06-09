@@ -2,6 +2,7 @@ class PicsController < ApplicationController
     before_action :find_pic, only: [:show, :edit, :update, :destroy]
 
   def index 
+    @pics = Pic.all
   end
 
   def new
@@ -19,7 +20,24 @@ class PicsController < ApplicationController
   end
 
   def show
-    
+
+  end
+
+  def edit
+
+  end
+
+  def update
+    if @pic.update(pic_params)
+      redirect_to @pic, notice: "Pic was updated!"
+    else
+      render 'edit'
+    end
+  end
+
+  def destroy
+    @pic.destroy
+    redirect_to root_path
   end
 
   private
