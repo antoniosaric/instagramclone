@@ -2,9 +2,13 @@ Rails.application.routes.draw do
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-resources :pics
+  resources :pics do 
+    member do 
+      put "like", to: "pics#upvote"
+    end
+  end
 
-root "pics#index"
+  root "pics#index"
 
 
 end
