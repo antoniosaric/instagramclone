@@ -1,2 +1,0 @@
-class UsermeetingsController < ApplicationController
-end
