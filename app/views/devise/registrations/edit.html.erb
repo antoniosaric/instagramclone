@@ -10,6 +10,16 @@
           <%= f.error_notification %>
 
           <div class="form-group">
+            <%= f.label :image %>
+            <%= f.file_field :image, as: :file, wrapper: :vertical_file_input, required: false %> 
+          </div>          
+
+          <div class="form-group">
+            <%= f.label :username %>
+            <%= f.text_field :username, autofocus: true, required: true, class: "form-control" %>
+          </div>
+
+          <div class="form-group">
             <%= f.label :email %>
             <%= f.email_field :email, required: true, autofocus: true, class: "form-control" %>
 
@@ -17,6 +27,11 @@
               <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
             <% end %>
           </div>
+ 
+          <div class="form-group">
+            <%= f.label :experience %>
+            <%= f.text_field :experience, autofocus: true, required: true, class: "form-control" %>
+          </div>        
 
           <div class="form-group">
             <%= f.label :password %>

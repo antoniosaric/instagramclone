@@ -21,9 +21,9 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 gem 'simple_form'
 gem 'devise'
-gem "paperclip", "~> 5.0.0"
+gem "paperclip"
 gem 'masonry-rails'
-gem 'acts_as_votable', '~> 0.10.0'
+gem "simple_calendar", "~> 2.0"
 
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
